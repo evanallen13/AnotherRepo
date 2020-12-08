@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+  
+}
+
+<div class="text-center">
+    <script src="~/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $.ajax({
+                url: "https://testapi1432.azurewebsites.net/WeatherForecast", success: function (result) {
+                    console.log(result)
+                }
+            });
+        })
+
+
+    </script>
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
